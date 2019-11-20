@@ -184,7 +184,6 @@ func handleConn(conn net.Conn) {
 	messages <- "\n" + who + " se ha desconectado"
 	leaving <- client{ch, who, conn}
 	conn.Close()
-
 }
 
 func clientWriter(conn net.Conn, ch <-chan string) {
